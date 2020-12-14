@@ -1,0 +1,25 @@
+{
+  "name": "mismicroservicios",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "datatables.net": "^1.10.22",
+    "datatables.net-dt": "^1.10.22",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-generator": "^4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.11.6",
+    "morgan": "~1.9.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0"
+  }
+}
