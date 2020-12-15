@@ -7,13 +7,6 @@ var mongoose = require('mongoose');
 require('../models/modelCancion');
 const Cancion = mongoose.model('Cancion');//Referencia al modelo
 
-
-/*
-ruta.get('/', (req, res) => {
-    console.log('Listado de libros');
-    res.render('libros/index', { title: 'Listado de libros'});
-});*/
-
 //Metodo GET sirve para listar los registros
 ruta.get('/', (req, res) => {
     //Método para buscar a todos las Canciones
@@ -26,30 +19,6 @@ ruta.get('/', (req, res) => {
 });
 
 
-/*
-ruta.get('/', (req, res) => {
-    //Método para buscar a todos lo libros
-    console.log('Listado de libros');
-    res.render('libros/index', { title: 'Listado de libros'});
-    Libro.find().then((libros) => {
-        res.json(libros);
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});*/
-
-/*
-//Encontrar una Cancion por ID
-ruta.get('/:_id', (req, res) => {
-    Cancion.findById(req.params._id).then((cancion) => {
-        res.json(cancion); //Solo busca un registro
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});
-*/
 //Encontrar una Cancion por numero
 ruta.get('/:numerocancion', (req, res) => {
     Cancion.findOne({NumeroCancion: req.params.numerocancion}).then((cancion) => {
@@ -113,17 +82,6 @@ ruta.put('/', (req, res) => {
     });  
 });
 
-/*
-//Método DELETE elimina un registro de cancion
-ruta.delete('/:_id', (req, res) => {
-    Cancion.findByIdAndRemove(req.params._id).then(() => {
-        res.send("La canción se eliminó exitosamente");
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});
-*/
 
 ruta.delete('/:numerocancion', (req, res) => {
     Cancion.findOneAndRemove({NumeroCancion: req.params.numerocancion}).then(() => {
