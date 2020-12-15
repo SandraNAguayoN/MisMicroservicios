@@ -14,7 +14,6 @@ mongoose.model('Cancion', {
     },
     Artista: {
         type: mongoose.SchemaTypes.ObjectId,
-        //type: mongoose.SchemaTypes.Number,
         ref: 'Artista',
         required: true,
         unique: false
@@ -34,7 +33,6 @@ mongoose.model('Cancion', {
     },
     Genero: {
         type: mongoose.SchemaTypes.ObjectId,
-        //type: mongoose.SchemaTypes.Number,
         ref: 'Genero',
         required: true
     }
