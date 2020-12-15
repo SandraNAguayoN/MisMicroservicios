@@ -7,12 +7,6 @@ var mongoose = require('mongoose');
 require('../models/modelLibro');
 const Libro = mongoose.model('Libro');//Referencia al modelo
 
-/*
-ruta.get('/', (req, res) => {
-    console.log('Listado de libros');
-    res.render('libros/index', { title: 'Listado de libros'});
-});*/
-
 //Metodo GET sirve para listar los registros
 ruta.get('/', (req, res) => {
     //Método para buscar a todos los libros
@@ -23,20 +17,6 @@ ruta.get('/', (req, res) => {
         throw error;
     });
 });
-
-
-/*
-ruta.get('/', (req, res) => {
-    //Método para buscar a todos lo libros
-    console.log('Listado de libros');
-    res.render('libros/index', { title: 'Listado de libros'});
-    Libro.find().then((libros) => {
-        res.json(libros);
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});*/
 
 
 //Encontrar un libro
