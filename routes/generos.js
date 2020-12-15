@@ -6,12 +6,6 @@ var mongoose = require('mongoose');
 require('../models/modelGenero');
 const Genero = mongoose.model('Genero');//Referencia al modelo
 
-/*
-ruta.get('/', (req, res) => {
-    console.log('Listado de géneros');
-    res.render('libros/index', { title: 'Listado de géneros'});
-});*/
-
 //Metodo GET sirve para listar los registros
 ruta.get('/', (req, res) => {
     //Método para buscar a todos los género
@@ -23,17 +17,6 @@ ruta.get('/', (req, res) => {
     });
 });
 
-/*
-//Encontrar una género por ID
-ruta.get('/:_id', (req, res) => {
-    Genero.findById(req.params._id).then((genero) => {
-        res.json(genero); //Solo busca un registro
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});
-*/
 //Encontrar una género por Numero
 ruta.get('/:numerogenero', (req, res) => {
     Genero.findOne({NumeroGenero: req.params.numerogenero}).then((genero) => {
@@ -85,18 +68,6 @@ ruta.put('/', (req, res) => {
         throw error;
     });  
 });
-
-/*
-//Método DELETE elimina un registro del género por ID
-ruta.delete('/:_id', (req, res) => {
-    Genero.findByIdAndRemove(req.params._id).then(() => {
-        res.send("El género se eliminó exitosamente");
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});
-*/
 
 //Método DELETE elimina un registro del género por numero
 ruta.delete('/:numerogenero', (req, res) => {
