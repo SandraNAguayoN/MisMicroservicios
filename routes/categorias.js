@@ -6,12 +6,6 @@ var mongoose = require('mongoose');
 require('../models/modelCategoria');
 const Categoria = mongoose.model('Categoria');//Referencia al modelo
 
-/*
-ruta.get('/', (req, res) => {
-    console.log('Listado de libros');
-    res.render('libros/index', { title: 'Listado de libros'});
-});*/
-
 //Metodo GET sirve para listar los registros
 ruta.get('/', (req, res) => {
     //Método para buscar a todos los libros
