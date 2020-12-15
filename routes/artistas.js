@@ -17,17 +17,6 @@ ruta.get('/', (req, res) => {
     });
 });
 
-/*
-//Encontrar un Artista por ID
-ruta.get('/:_id', (req, res) => {
-    Artista.findById(req.params._id).then((artista) => {
-        res.json(artista); //Solo busca un registro
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});
-*/
 
 //Encontrar un Artista por numero
 ruta.get('/:numeroartista', (req, res) => {
@@ -89,18 +78,6 @@ ruta.put('/', (req, res) => {
         throw error;
     });  
 });
-
-/*
-//Método DELETE elimina un registro de artista por ID
-ruta.delete('/:_id', (req, res) => {
-    Artista.findByIdAndRemove(req.params._id).then(() => {
-        res.send("El artista se eliminó exitosamente");
-    }).catch((error) => {
-        if(error)
-        throw error;
-    });
-});
-*/
 
 //Método DELETE elimina un registro de artista por numero
 ruta.delete('/:numeroartista', (req, res) => {
